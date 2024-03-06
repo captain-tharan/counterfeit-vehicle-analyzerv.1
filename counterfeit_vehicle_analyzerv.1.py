@@ -67,7 +67,7 @@ def process_frame(frame):
         checked_plates.add(plate_text)
 
     # Connect to the SQLite database
-    conn = sqlite3.connect('tes.db')
+    conn = sqlite3.connect('test.db')
     c = conn.cursor()
     c.execute('SELECT * FROM vehicles WHERE license_plate = ?', (plate_text,))
     result = c.fetchone()
